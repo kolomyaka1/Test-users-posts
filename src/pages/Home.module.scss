@@ -1,0 +1,23 @@
+@import '../styles/variables.scss';
+
+.wrapper {
+    margin-top: 64px;
+}
+
+.header_title {
+    text-align: center;
+
+}
+
+.top_title {
+    font-weight: 600;
+    font-size: 48px;
+    color: $titleColor;
+    margin-bottom: 47px;
+}
+
+.bot_title {
+    font-size: 18px;
+    font-weight: 400;
+    color: $accentColor;
+}

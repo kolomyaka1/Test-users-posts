@@ -1,0 +1,15 @@
+@import '~normalize.css'; 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5 {
+    margin: 0;
+}
+
+body {
+    position: relative;
+    font-family: Poppins, Arial;    
+}
