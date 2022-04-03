@@ -1,0 +1,15 @@
+@import '../../styles/variables.scss';
+
+.posts {
+    &__wrapper {
+        margin-left: 755px;
+        max-width: 940px;
+    }
+    &__title {
+        color: $titleColor;
+        font-size: 48px;
+        font-weight: 600;
+        margin-bottom: 52px;
+    }
+    
+}

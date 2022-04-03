@@ -1,4 +1,5 @@
 import React from "react";
+import Posts from "../Components/Posts/Posts";
 import SliderComponent from "../Components/Slider/Slider";
 import s from "./Home.module.scss";
 
@@ -17,6 +18,7 @@ const Home = (props: Props) => {
         </div>
       </div>
       <SliderComponent />
+      <Posts />
     </>
   );
 };

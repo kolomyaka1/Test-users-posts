@@ -18,7 +18,7 @@ const SliderComponent = (props: Props) => {
         <Slider {...settings}>
           {[1,2,3,4,5,6,7,8,9].map((item,index) => {
             return (
-              <UserCard />
+              <UserCard key={index} />
             )
           })}
         </Slider>
