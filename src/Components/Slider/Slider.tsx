@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './Slider.scss';
+import UserCard from "../UserCard/UserCard";
 
 type Props = {};
 
@@ -17,11 +18,7 @@ const SliderComponent = (props: Props) => {
         <Slider {...settings}>
           {[1,2,3,4,5,6,7,8,9].map((item,index) => {
             return (
-              <div key={index}>
-              <h1 style={{ color: 'red', fontSize: '48px', textAlign: 'center'}}>
-                {item}
-              </h1>
-            </div>
+              <UserCard />
             )
           })}
         </Slider>

@@ -1,33 +1,62 @@
-
+@import '../../styles/variables.scss';
 
 .slick-arrow {
     width: 48px;
-    height: 48px;
-    
+    height: 48px;    
 }
 
 .slick-prev,
 .slick-next {
     width: 48px;
     height: 48px;
+    border-radius: 50%;
+    &::before {
+        content: '';
+    }
 }
 
 .slick-prev {
-    margin-left: 50px;
-    position: relative;
-    top: 20px;
-    left: 500px;
+    position: absolute;
+    top: -40px;
+    left: 630px;
+    background: url('../../assets/arrow-prev.svg') center center;
+    &:focus {
+        background: $orangeColor;
+        background: url('../../assets/arrow-prev.svg') center center;
+    }
+    &:hover {
+        background: $orangeColor;
+        background: url('../../assets/arrow-prev.svg') center center;
+    }
+
 }
 
 .slick-next {
-    margin-right: 50px;
     position: absolute;
-    top: 20px;
-    right: 500px;
+    top: -40px;
+    right: 650px;
+    background: url('../../assets/arrow-next.svg') center center;
+    &:focus {
+        background: $orangeColor;
+        background: url('../../assets/arrow-next.svg') center center;
+
+    }
+    &:hover {
+        background: $orangeColor;
+        background: url('../../assets/arrow-next.svg') center center;
+
+    }
+
 }
 
 .slider {
-    max-width: 1280px;
+    max-width: 1400px;
     margin: 0 auto;
-    background-color: #333;
 }
+
+.slick-list {
+    max-width: 1250px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
