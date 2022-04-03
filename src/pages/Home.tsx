@@ -1,4 +1,5 @@
 import React from "react";
+import SliderComponent from "../Components/Slider/Slider";
 import s from "./Home.module.scss";
 
 type Props = {};
@@ -13,6 +14,7 @@ const Home = (props: Props) => {
           лет
         </h3>
       </div>
+      <SliderComponent />
     </div>
   );
 };
