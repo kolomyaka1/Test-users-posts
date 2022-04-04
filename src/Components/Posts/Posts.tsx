@@ -1,18 +1,11 @@
 import React, { useEffect } from 'react'
-import { useCustomDispatch, useCustomSelector } from '../../hooks/store';
-import { fetchUsers } from '../../store/thunks/fetchUsers';
 import PostItem from './PostItem/PostItem';
 import s from './Posts.module.scss';
 
 type Props = {}
 
 const Posts = (props: Props) => {
-  const dispatch = useCustomDispatch();
-  const isLoading = useCustomSelector(state => state.usersSliceReducer.isLoading);
 
-  useEffect(() => {
-    dispatch(fetchUsers())
-  }, [])
 
   return (
     <div className={s.posts__wrapper}>

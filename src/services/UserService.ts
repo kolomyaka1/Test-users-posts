@@ -5,7 +5,7 @@ import { AxiosResponse } from 'axios'
 import api from '../../src/axios/index';
 
 export class UsersService {
-    static getUsers(): Promise<AxiosResponse<User, Response>> {
-        return api.get<User>(`/users`);
+    static getUsers(): Promise<AxiosResponse<User[], Response>> {
+        return api.get<User[]>(`/users`);
     }
 }

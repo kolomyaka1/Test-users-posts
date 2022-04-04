@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Posts from "../Components/Posts/Posts";
 import SliderComponent from "../Components/Slider/Slider";
+import { useCustomDispatch } from "../hooks/store";
+import { fetchUsers } from "../store/thunks/fetchUsers";
 import s from "./Home.module.scss";
+
 
 type Props = {};
 
 const Home = (props: Props) => {
+
+  const dispatch = useCustomDispatch();
+
+  useEffect(() => {
+    dispatch(fetchUsers())
+  }, [])
+
+
   return (
     <>
       <div className={s.wrapper}>

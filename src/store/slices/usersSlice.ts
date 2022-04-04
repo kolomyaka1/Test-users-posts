@@ -3,19 +3,13 @@ import { AxiosResponse } from 'axios';
 import { Response, User } from "../types/types";
 
 type UserState = {
-    users: User,
+    users: Array<any>,
     isLoading: boolean,
     response: Response
 }
 
 const initialState: UserState = {
-    users: {
-        id: 0,
-        name: '',
-        company: {
-            name: ''
-        },
-    },
+    users: [],
     isLoading: false,
     response: {
         status: 0,
@@ -31,7 +25,7 @@ export const usersSlice = createSlice({
         fetchUsers(state) {
             state.isLoading = true;
         },
-        fetchUsersSuccess(state, action: PayloadAction<AxiosResponse<User>>) {
+        fetchUsersSuccess(state, action: PayloadAction<AxiosResponse<User[]>>) {
             state.isLoading = false;
             state.users = action.payload.data
             state.response = {
@@ -39,7 +33,7 @@ export const usersSlice = createSlice({
                 message: action.payload.statusText
             }
         },
-        fetchUsersError(state, action: PayloadAction<AxiosResponse<User>>) {
+        fetchUsersError(state, action: PayloadAction<AxiosResponse<User[]>>) {
             state.isLoading = false;
             state.response = {
                 status: action.payload.status,
