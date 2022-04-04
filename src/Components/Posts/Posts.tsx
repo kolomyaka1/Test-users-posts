@@ -7,11 +7,11 @@ import s from './Posts.module.scss';
 type Props = {}
 
 const Posts = (props: Props) => {
-
+  const dispatch = useCustomDispatch();
   const isLoading = useCustomSelector(state => state.usersSliceReducer.isLoading);
 
   useEffect(() => {
-    useCustomDispatch(fetchUsers());
+    dispatch(fetchUsers())
   }, [])
 
   return (
