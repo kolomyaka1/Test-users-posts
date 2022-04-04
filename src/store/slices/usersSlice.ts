@@ -3,7 +3,7 @@ import { AxiosResponse } from 'axios';
 import { Response, User } from "../types/types";
 
 type UserState = {
-    users: Array<any>,
+    users: Array<User>,
     isLoading: boolean,
     response: Response
 }

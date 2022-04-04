@@ -1,4 +1,4 @@
-import { UsersService } from "../../services/UserService";
+import { UsersService } from "../../services/Services";
 import { usersSlice } from "../slices/usersSlice"
 import { AppDispatch } from "../store";
 
