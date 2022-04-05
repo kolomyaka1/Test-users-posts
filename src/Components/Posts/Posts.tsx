@@ -10,12 +10,13 @@ const Posts = (props: Props) => {
 
   let posts = useCustomSelector(state => state.postsSliceReducer.posts);
   let users = useCustomSelector(state => state.usersSliceReducer.users)
-
+  let currentUser = useCustomSelector(state => state.usersSliceReducer.currentUserId)
+  let userId = currentUser - 1;
 
 
   return (
     <div className={s.posts__wrapper}>
-      <h2 className={s.posts__title}>{users[0] && `3 актуальных поста ${users[0].company.name}`}</h2>
+      <h2 className={s.posts__title}>{users[userId] && `3 актуальных поста ${users[userId].company.name}`}</h2>
       {posts.map((post: Post) => {
         return <PostItem key={post.id} id={post.id} userId={post.userId} title={post.title} body={post.body} />
       })}

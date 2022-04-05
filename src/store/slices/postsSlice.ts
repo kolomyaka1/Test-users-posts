@@ -6,13 +6,11 @@ type postState = {
     posts: Array<Post>
     isLoading: boolean,
     response: Response
-    currentCompany: string
 }
 
 const initialState: postState = {
     posts: [],
     isLoading: false,
-    currentCompany: '',
     response: {
         status: 0,
         message: ''

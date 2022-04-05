@@ -2,41 +2,50 @@
 
 .card {
     cursor: pointer;
+
+
     &__img {
         margin-bottom: 20px;
 
     }
+
     img::before {
         position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                height: 10px;
-                background: $orangeColor;
-                content: '';
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 10px;
+        background: $orangeColor;
+        content: '';
     }
+
     &__name {
         color: $titleColor;
         font-size: 24px;
         font-weight: 500;
     }
+
     &__subname {
         color: $accentColor;
         font-size: 18px;
         font-weight: 400;
     }
+
     &:hover {
-        .card{
+        .card {
             &__name {
                 color: $orangeColor;
             }
+
             &__subname {
                 color: $orangeColor;
             }
         }
+
         img {
             border-image: 5px solid $orangeColor;
-            &::before{
+
+            &::before {
                 content: '';
                 height: 5px;
                 background: $orangeColor;
@@ -44,7 +53,7 @@
                 bottom: 5px;
                 left: 0;
                 width: 100%;
-                transform: translate3d(0,10px,0);
+                transform: translate3d(0, 10px, 0);
                 transition: transform 0.35s;
             }
         }

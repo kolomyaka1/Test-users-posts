@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Posts from "../Components/Posts/Posts";
 import SliderComponent from "../Components/Slider/Slider";
-import { useCustomDispatch } from "../hooks/store";
+import { useCustomDispatch, useCustomSelector } from "../hooks/store";
 import { fetchPosts } from "../store/thunks/fetchPosts";
 import { fetchUsers } from "../store/thunks/fetchUsers";
 import s from "./Home.module.scss";
@@ -13,9 +13,11 @@ const Home = (props: Props) => {
 
   const dispatch = useCustomDispatch();
 
+  let currentUserId = useCustomSelector(state => state.usersSliceReducer.currentUserId)
+
   useEffect(() => {
     dispatch(fetchUsers())
-    dispatch(fetchPosts(1));
+    dispatch(fetchPosts(currentUserId));
   }, [])
 
 

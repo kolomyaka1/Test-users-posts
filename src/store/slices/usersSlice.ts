@@ -6,17 +6,27 @@ type UserState = {
     users: Array<User>,
     isLoading: boolean,
     response: Response
+    currentUserId: number
+    currentCompany: string
 }
 
 const initialState: UserState = {
     users: [],
     isLoading: false,
+    currentUserId: 1,
+    currentCompany: '',
     response: {
         status: 0,
         message: '',
     },
 }
 
+type currentUser = {
+    id: number
+    company: string
+
+
+}
 
 export const usersSlice = createSlice({
     name: 'users',
@@ -39,8 +49,13 @@ export const usersSlice = createSlice({
                 status: action.payload.status,
                 message: action.payload.statusText
             }
+        },
+        setCurrentUser(state, action: PayloadAction<number>) {
+            state.currentUserId = action.payload
         }
     }
 })
+
+export const { setCurrentUser } = usersSlice.actions;
 
 export default usersSlice.reducer;

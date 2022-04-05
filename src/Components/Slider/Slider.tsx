@@ -26,6 +26,7 @@ const SliderComponent = (props: Props) => {
   return <div className='slider'>
     <Slider {...settings}>
       {users.map((user: User) => {
+
         return (
           <UserCard key={user.id} id={user.id} name={user.name} company={user.company.name} />
         )

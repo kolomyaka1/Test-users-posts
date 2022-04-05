@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useCustomDispatch } from '../../../hooks/store';
 import s from './PostItem.module.scss';
 
 type Props = {
@@ -9,6 +10,9 @@ type Props = {
 }
 
 const PostItem = ({ userId, title, body }: Props) => {
+
+
+
 
   return (
     <div className={s.post__item}>
