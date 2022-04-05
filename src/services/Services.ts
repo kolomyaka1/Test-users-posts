@@ -11,7 +11,7 @@ export class UsersService {
 }
 
 export class PostsService {
-    static getPosts(): Promise<AxiosResponse<Post[], Response>> {
-        return api.get<Post[]>('/posts');
+    static getPosts(userId: number): Promise<AxiosResponse<Post[], Response>> {
+        return api.get<Post[]>(`/posts?userId=${userId}&_limit=3`);
     }
 }

@@ -15,7 +15,7 @@ const Home = (props: Props) => {
 
   useEffect(() => {
     dispatch(fetchUsers())
-    dispatch(fetchPosts());
+    dispatch(fetchPosts(1));
   }, [])
 
 

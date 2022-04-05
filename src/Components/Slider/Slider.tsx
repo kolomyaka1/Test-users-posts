@@ -20,6 +20,9 @@ const SliderComponent = (props: Props) => {
     slidesToShow: 4,
     slidesToScroll: 1,
   };
+
+
+
   return <div className='slider'>
     <Slider {...settings}>
       {users.map((user: User) => {
