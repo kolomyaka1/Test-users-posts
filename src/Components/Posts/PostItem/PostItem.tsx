@@ -12,8 +12,6 @@ type Props = {
 const PostItem = ({ userId, title, body }: Props) => {
 
 
-
-
   return (
     <div className={s.post__item}>
       <h4 className={s.post__title}>{title}</h4>

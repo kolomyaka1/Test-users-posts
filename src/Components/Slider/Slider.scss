@@ -2,7 +2,7 @@
 
 .slick-arrow {
     width: 48px;
-    height: 48px;    
+    height: 48px;
 }
 
 .slick-prev,
@@ -10,6 +10,7 @@
     width: 48px;
     height: 48px;
     border-radius: 50%;
+
     &::before {
         content: '';
     }
@@ -20,10 +21,12 @@
     top: -40px;
     left: 630px;
     background: url('../../assets/arrow-prev.svg') center center;
+
     &:focus {
         background: $orangeColor;
         background: url('../../assets/arrow-prev.svg') center center;
     }
+
     &:hover {
         background: $orangeColor;
         background: url('../../assets/arrow-prev.svg') center center;
@@ -36,11 +39,13 @@
     top: -40px;
     right: 650px;
     background: url('../../assets/arrow-next.svg') center center;
+
     &:focus {
         background: $orangeColor;
         background: url('../../assets/arrow-next.svg') center center;
 
     }
+
     &:hover {
         background: $orangeColor;
         background: url('../../assets/arrow-next.svg') center center;
@@ -60,4 +65,3 @@
     padding: 0 10px;
     margin: 0 auto;
 }
-

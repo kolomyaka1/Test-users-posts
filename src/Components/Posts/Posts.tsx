@@ -16,10 +16,12 @@ const Posts = (props: Props) => {
 
   return (
     <div className={s.posts__wrapper}>
-      <h2 className={s.posts__title}>{users[userId] && `3 актуальных поста ${users[userId].company.name}`}</h2>
-      {posts.map((post: Post) => {
-        return <PostItem key={post.id} id={post.id} userId={post.userId} title={post.title} body={post.body} />
-      })}
+      <div className={s.posts__body}>
+        <h2 className={s.posts__title}>{users[userId] && `3 актуальных поста ${users[userId].company.name}`}</h2>
+        {posts.map((post: Post) => {
+          return <PostItem key={post.id} id={post.id} userId={post.userId} title={post.title} body={post.body} />
+        })}
+      </div>
     </div>
   )
 }

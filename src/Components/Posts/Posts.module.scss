@@ -2,14 +2,19 @@
 
 .posts {
     &__wrapper {
-        margin-left: 31%;
-        max-width: 940px;
+        max-width: 1400px;
+        margin: 0 auto 121px;
     }
+
     &__title {
         color: $titleColor;
         font-size: 48px;
         font-weight: 600;
         margin-bottom: 52px;
     }
-    
+
+    &__body {
+        margin-left: 28%;
+    }
+
 }
