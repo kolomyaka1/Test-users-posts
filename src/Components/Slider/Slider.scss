@@ -19,7 +19,7 @@
 .slick-prev {
     position: absolute;
     top: -40px;
-    left: 630px;
+    left: 46%;
     background: url('../../assets/arrow-prev.svg') center center;
 
     &:focus {
@@ -37,7 +37,7 @@
 .slick-next {
     position: absolute;
     top: -40px;
-    right: 650px;
+    right: 46%;
     background: url('../../assets/arrow-next.svg') center center;
 
     &:focus {
@@ -54,6 +54,8 @@
 
 }
 
+
+
 .slider {
     max-width: 1400px;
     margin: 0 auto;
@@ -64,4 +66,50 @@
     max-width: 1250px;
     padding: 0 10px;
     margin: 0 auto;
+}
+
+@media (max-width: 1250px) {
+
+    .slick {
+        &-prev {
+            left: 44%;
+        }
+
+        &-next {
+            right: 44%;
+        }
+    }
+
+}
+
+@media (max-width: 750px) {
+    .slider {}
+
+    .slick {
+        &-prev {
+            left: 42%;
+        }
+
+        &-next {
+            right: 42%;
+        }
+    }
+
+}
+
+@media (max-width: 550px) {
+    .slider {
+        max-width: 300px;
+    }
+
+    .slick {
+        &-prev {
+            left: 33%;
+        }
+
+        &-next {
+            right: 33%;
+        }
+    }
+
 }
